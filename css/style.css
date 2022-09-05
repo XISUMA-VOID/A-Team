@@ -1,0 +1,172 @@
+/* Start Of Variables */
+
+:root {
+	--main-color: #1f3543;
+	--secondry-color: #f1364a;
+	--font-color: #eaeff1;
+}
+
+/* End Of Variables */
+
+/* Start Of Global Values */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100vh;
+	background-color: var(--main-color);
+}
+
+div {
+	display: inline-block;
+}
+
+/* End Of Global Values */
+
+/* main container */
+.container {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+	height: 350px;
+	border: 4px solid var(--font-color);
+	display: inline-block;
+}
+
+.container > div {
+	width: 50%;
+	height: 100%;
+}
+
+/*-----Start left section-----*/
+
+/* left section */
+.left {
+	position: absolute;
+	left: 0;
+}
+
+/* the red border arround the image */
+.left .red-border {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 150px;
+	display: inline-block;
+	box-sizing: content-box;
+	border: 10px solid var(--secondry-color);
+	background-color: var(--main-color);
+}
+
+/* the image and its position */
+.left .red-border img {
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 125px;
+}
+
+/*-----End left section-----*/
+
+/*===========================================*/
+
+/*-----Start Right section-----*/
+
+.right {
+	position: absolute;
+	right: 0;
+	color: var(--font-color);
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.right h1 {
+	margin: 0;
+	text-transform: capitalize;
+	font-size: 27px;
+}
+
+.right .about-us-div {
+	width: 117px;
+	height: 19px;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.right hr {
+	width: 35px;
+	height: 2px;
+	border: none;
+	background: var(--secondry-color);
+}
+
+.right .about-us-div::before {
+	content: "";
+	border: 2px solid var(--secondry-color);
+	width: 5px;
+	height: 5px;
+	margin: 0 -5px 0 0;
+}
+
+.right span {
+	color: var(--secondry-color);
+}
+
+.right > p {
+	line-height: 24px;
+}
+
+.cards-div {
+	width: 300px;
+	height: 90px;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card {
+	width: 90px;
+	height: 90px;
+	border: 3px solid var(--font-color);
+	text-transform: capitalize;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.card::before {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent var(--secondry-color);
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	z-index: 9;
+	transform: rotate(-45deg);
+}
+
+i {
+	font-size: 46px;
+	color: var(--secondry-color);
+}
+
+/*-----End Right section-----*/
